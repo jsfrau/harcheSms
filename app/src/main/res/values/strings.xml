@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HarcheSms</string>
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
 </resources>

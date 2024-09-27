@@ -30,12 +30,31 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <!-- Поле Email -->
+            <!-- Поле Никнейм (только для регистрации) -->
             <EditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/editTextNickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="Никнейм"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:visibility="gone" />
+
+            <!-- Текст доступности никнейма -->
+            <TextView
+                android:id="@+id/textViewNicknameAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <!-- Поле Email или Никнейм -->
+            <EditText
+                android:id="@+id/editTextEmailOrNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email или Никнейм"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp" />
 
@@ -83,8 +102,8 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="gone"
-    android:layout_gravity="center" /> <!-- Позиционирование по центру -->
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center" />
 
 </FrameLayout>

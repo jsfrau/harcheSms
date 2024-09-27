@@ -1,31 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/homeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".HomeActivity">
 
-    <!-- Приветственное сообщение -->
-    <TextView
-        android:id="@+id/textViewWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Добро пожаловать!"
-        android:textSize="18sp"
-        android:layout_gravity="center_horizontal" />
+    <!-- Основной контент -->
+    <LinearLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Кнопка выхода -->
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Выйти"
-        android:layout_gravity="center_horizontal"
- />
+        <!-- Приветственное сообщение -->
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать!"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal" />
 
-    <!-- Добавьте здесь другие элементы интерфейса вашей домашней страницы -->
-    <!-- Например, форма добавления имени и список пользователей -->
-</LinearLayout>
+        <!-- Кнопка "Создать игру" -->
+        <Button
+            android:id="@+id/buttonCreateGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создать игру"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <!-- Кнопка "Найти игру" -->
+        <Button
+            android:id="@+id/buttonFindGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Найти игру"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <!-- Макет для отображения сообщения и прогрессбара -->
+        <LinearLayout
+            android:id="@+id/layoutSearching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textViewSearching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поиск игры..."
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBarSearching"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Информация об онлайн -->
+        <TextView
+            android:id="@+id/textViewOnlineInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Онлайн: 0, Ищут игру: 0"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <!-- Боковое меню -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

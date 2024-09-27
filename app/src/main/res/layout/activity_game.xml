@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Информация о ходе -->
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Информация"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Информация о противнике -->
+    <TextView
+        android:id="@+id/textViewOpponentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вы играете с ..."
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Игровое поле -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginTop="20dp">
+
+        <!-- 9 кнопок для игрового поля -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="24sp" />
+    </GridLayout>
+
+    <!-- Чат -->
+    <LinearLayout
+        android:id="@+id/chatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <!-- Список сообщений -->
+        <ListView
+            android:id="@+id/listViewMessages"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <!-- Поле ввода сообщения и кнопка отправки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Введите сообщение" />
+
+            <Button
+                android:id="@+id/buttonSendMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отправить" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
