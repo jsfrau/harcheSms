@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Online Status Indicator -->
+    <ImageView
+        android:id="@+id/imageViewOnlineStatus"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_offline" />
+
+    <!-- User Avatar -->
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_account"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop" />
+
+    <!-- User Nickname -->
+    <TextView
+        android:id="@+id/textViewNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:layout_weight="1"
+        android:textSize="16sp" />
+
+    <!-- Action Button -->
+    <Button
+        android:id="@+id/buttonAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Action" />
+
+    <!-- Reject Button for Friend Requests -->
+    <Button
+        android:id="@+id/buttonReject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отклонить"
+        android:visibility="gone"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

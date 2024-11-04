@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "541375631243",
+    "project_id": "aspectus-b2d24",
+    "storage_bucket": "aspectus-b2d24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541375631243:android:eae4be2d8654a9bb4a298e",
+        "android_client_info": {
+          "package_name": "com.example.harchesms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB4FeuwT8GuwPY9btz-1ogGxmC5zH-J4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

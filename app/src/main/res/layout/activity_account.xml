@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/accountLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Никнейм: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Победы: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поражения: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+    <TextView
+        android:id="@+id/textViewRecentGamesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Последние игры"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecentGames"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_account"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Кнопка редактирования профиля -->
+    <Button
+        android:id="@+id/buttonEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Редактировать профиль"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

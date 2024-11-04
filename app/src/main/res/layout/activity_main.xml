@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <!-- Ваш ScrollView с формой -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- LinearLayout с вашими элементами формы -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок формы -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Авторизация"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Поле Никнейм (только для регистрации) -->
+            <EditText
+                android:id="@+id/editTextNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Никнейм"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:visibility="gone" />
+
+            <!-- Текст доступности никнейма -->
+            <TextView
+                android:id="@+id/textViewNicknameAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <!-- Поле Email или Никнейм -->
+            <EditText
+                android:id="@+id/editTextEmailOrNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email или Никнейм"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+
+            <!-- Поле Пароль -->
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <!-- Поле Подтверждение Пароля (только для регистрации) -->
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Подтвердите пароль"
+                android:inputType="textPassword"
+                android:visibility="gone" />
+
+            <!-- Кнопка Входа/Регистрации -->
+            <Button
+                android:id="@+id/buttonAuth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вход" />
+
+            <!-- Текст для переключения режима -->
+            <TextView
+                android:id="@+id/textViewToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:text="Нет аккаунта? Зарегистрируйтесь"
+                android:textColor="@color/purple_500" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Ваш ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+</FrameLayout>

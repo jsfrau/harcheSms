@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Аккаунт"
+        android:icon="@android:drawable/ic_menu_manage" />
+    <item
+        android:id="@+id/nav_friends"
+        android:title="Друзья"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+    <item
+        android:id="@+id/nav_statistics"
+        android:title="Статистика"
+        android:icon="@drawable/ic_statistics" />
+    <item
+        android:id="@+id/nav_game_list"
+        android:title="Список игр"
+        android:icon="@android:drawable/ic_menu_agenda" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Выйти"
+        android:icon="@android:drawable/ic_lock_power_off" />
+</menu>
